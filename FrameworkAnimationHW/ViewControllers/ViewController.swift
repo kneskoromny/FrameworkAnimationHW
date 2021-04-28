@@ -48,9 +48,11 @@ class ViewController: UIViewController {
         
         if isFirstLaunch {
             firstAnimationShow()
+            changeViewColors()
             
         } else {
-            otherAnimationShow() 
+            otherAnimationShow()
+            changeViewColors()
         }
     }
     
@@ -109,6 +111,27 @@ class ViewController: UIViewController {
         springAnimationView.transform = .identity
         nextPreset = DataManager.shared.presets.randomElement()
         runButton.setTitle("Run \(nextPreset ?? "")", for: .normal)
+    }
+    
+    private func changeViewColors() {
+        let red = Int.random(in: 1...255)
+        let green = Int.random(in: 1...255)
+        let blue = Int.random(in: 1...255)
+        
+        UIView.animate(withDuration: 1.0) {
+            self.view.backgroundColor = UIColor(
+                red: CGFloat(red)/255,
+                green: CGFloat(green)/255,
+                blue: CGFloat(blue)/255,
+                alpha: 1.0
+            )
+        }
+        springAnimationView.backgroundColor = UIColor(
+            red: CGFloat(255 - red)/255,
+            green: CGFloat(255 - green)/255,
+            blue: CGFloat(255 - blue)/255,
+            alpha: 1.0
+        )
     }
 }
 
