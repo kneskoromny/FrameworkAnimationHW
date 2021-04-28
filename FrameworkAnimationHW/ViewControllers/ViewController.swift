@@ -32,53 +32,66 @@ class ViewController: UIViewController {
         springAnimationView.layer.cornerRadius = springAnimationView.frame.height / 10
         runButton.layer.cornerRadius = runButton.frame.height / 3
         
-        
-        
-        presetLabel.text = "preset: \(firstAnimation.preset)"
-        curveLabel.text = "curve: \(firstAnimation.curve)"
-        forceLabel.text = "force: \(firstAnimation.force)"
-        durationLabel.text = "duration: \(firstAnimation.duration)"
-        delayLabel.text = "delay: \(firstAnimation.delay)"
+        addParametersForAnimation(
+            preset: firstAnimation.preset,
+            curve: firstAnimation.curve,
+            force: CGFloat(firstAnimation.force),
+            duration: CGFloat(firstAnimation.duration),
+            delay: CGFloat(firstAnimation.delay)
+        )
         
         runButton.setTitle("Run", for: .normal)
     }
     
     //MARK: - IB Actions
     @IBAction func runButtonPressed() {
+        
         if isFirstLaunch {
-            firstButtonPress()
+            firstAnimationShow()
             
         } else {
-            nextButtonPress()
-            
+            otherAnimationShow() 
         }
     }
     
     //MARK: - Private Methods
-    private func firstButtonPress() {
-        springAnimationView.animation = firstAnimation.preset
-        springAnimationView.curve = firstAnimation.curve
-        springAnimationView.force = CGFloat(firstAnimation.force)
-        springAnimationView.duration = CGFloat(firstAnimation.duration)
-        springAnimationView.delay = CGFloat(firstAnimation.delay)
-        
+    private func firstAnimationShow() {
+ 
         springAnimationView.animate()
         
-        springAnimationView.transform = .identity
-        nextPreset = DataManager.shared.presets.randomElement()
-        runButton.setTitle("Run \(nextPreset ?? "")", for: .normal)
+        prepareNextAnimationPreset()
         
         isFirstLaunch = false
     }
     
-    private func nextButtonPress() {
+    private func otherAnimationShow() {
+        
         let preset = nextPreset ?? ""
         let curve = DataManager.shared.curves.randomElement() ?? ""
         let force = CGFloat(DataManager.shared.forces.randomElement() ?? 1.0)
         let duration = CGFloat(DataManager.shared.durations.randomElement() ?? 2.0)
         let delay = CGFloat(DataManager.shared.delays.randomElement() ?? 0.2)
         
-        // labels text
+        addParametersForAnimation(
+            preset: preset,
+            curve: curve,
+            force: force,
+            duration: duration,
+            delay: delay
+        )
+        
+        springAnimationView.animate()
+
+        prepareNextAnimationPreset()
+    }
+    
+    private func addParametersForAnimation(
+        preset: String,
+        curve: String,
+        force: CGFloat,
+        duration: CGFloat,
+        delay: CGFloat
+    ) {
         presetLabel.text = "preset: \(preset)"
         curveLabel.text = "curve: \(curve)"
         forceLabel.text = "force: \(force)"
@@ -90,11 +103,14 @@ class ViewController: UIViewController {
         springAnimationView.force = force
         springAnimationView.duration = duration
         springAnimationView.delay = delay
-        
-        springAnimationView.animate()
+    }
+    
+    private func prepareNextAnimationPreset() {
         springAnimationView.transform = .identity
         nextPreset = DataManager.shared.presets.randomElement()
         runButton.setTitle("Run \(nextPreset ?? "")", for: .normal)
     }
+    
+    
 
 }
