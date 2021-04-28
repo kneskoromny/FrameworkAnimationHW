@@ -29,8 +29,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        springAnimationView.layer.cornerRadius = springAnimationView.frame.height / 10
-        runButton.layer.cornerRadius = runButton.frame.height / 3
+        springAnimationView.applyDesign(divisorFrame: 10)
+        runButton.applyDesign(divisorFrame: 3)
         
         addParametersForAnimation(
             preset: firstAnimation.preset,
@@ -110,7 +110,6 @@ class ViewController: UIViewController {
         nextPreset = DataManager.shared.presets.randomElement()
         runButton.setTitle("Run \(nextPreset ?? "")", for: .normal)
     }
-    
-    
-
 }
+
+
