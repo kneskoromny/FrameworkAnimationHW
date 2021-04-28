@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		F72B52F82639B6DB00E11C20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72B52F62639B6DB00E11C20 /* Main.storyboard */; };
 		F72B52FA2639B6DC00E11C20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F72B52F92639B6DC00E11C20 /* Assets.xcassets */; };
 		F72B52FD2639B6DC00E11C20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72B52FB2639B6DC00E11C20 /* LaunchScreen.storyboard */; };
+		F72B530D2639BB1200E11C20 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72B530C2639BB1200E11C20 /* DataManager.swift */; };
+		F72B53172639BB9E00E11C20 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72B53162639BB9E00E11C20 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		F72B52F92639B6DC00E11C20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F72B52FC2639B6DC00E11C20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F72B52FE2639B6DC00E11C20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F72B530C2639BB1200E11C20 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		F72B53162639BB9E00E11C20 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +60,6 @@
 				57FEDDD8BD0CC539D4D15087 /* Pods-FrameworkAnimationHW.debug.xcconfig */,
 				093A00F394EBA4BF257AAA61 /* Pods-FrameworkAnimationHW.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,15 +84,66 @@
 		F72B52EF2639B6DB00E11C20 /* FrameworkAnimationHW */ = {
 			isa = PBXGroup;
 			children = (
-				F72B52F02639B6DB00E11C20 /* AppDelegate.swift */,
-				F72B52F22639B6DB00E11C20 /* SceneDelegate.swift */,
-				F72B52F42639B6DB00E11C20 /* ViewController.swift */,
-				F72B52F62639B6DB00E11C20 /* Main.storyboard */,
-				F72B52F92639B6DC00E11C20 /* Assets.xcassets */,
-				F72B52FB2639B6DC00E11C20 /* LaunchScreen.storyboard */,
-				F72B52FE2639B6DC00E11C20 /* Info.plist */,
+				F72B53092639BAB200E11C20 /* ViewControllers */,
+				F72B53132639BB4900E11C20 /* Models */,
+				F72B53102639BB1800E11C20 /* Services */,
+				F72B53142639BB5800E11C20 /* Storyboards */,
+				F72B530A2639BAE000E11C20 /* Supports */,
+				F72B53152639BB7000E11C20 /* Resources */,
 			);
 			path = FrameworkAnimationHW;
+			sourceTree = "<group>";
+		};
+		F72B53092639BAB200E11C20 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F72B52F42639B6DB00E11C20 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F72B530A2639BAE000E11C20 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				F72B52F02639B6DB00E11C20 /* AppDelegate.swift */,
+				F72B52F22639B6DB00E11C20 /* SceneDelegate.swift */,
+				F72B52FE2639B6DC00E11C20 /* Info.plist */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		F72B53102639BB1800E11C20 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F72B530C2639BB1200E11C20 /* DataManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F72B53132639BB4900E11C20 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F72B53162639BB9E00E11C20 /* Model.swift */,
+			);
+			name = Models;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		F72B53142639BB5800E11C20 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F72B52F62639B6DB00E11C20 /* Main.storyboard */,
+				F72B52FB2639B6DC00E11C20 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F72B53152639BB7000E11C20 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F72B52F92639B6DC00E11C20 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,7 +260,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F72B53172639BB9E00E11C20 /* Model.swift in Sources */,
 				F72B52F52639B6DB00E11C20 /* ViewController.swift in Sources */,
+				F72B530D2639BB1200E11C20 /* DataManager.swift in Sources */,
 				F72B52F12639B6DB00E11C20 /* AppDelegate.swift in Sources */,
 				F72B52F32639B6DB00E11C20 /* SceneDelegate.swift in Sources */,
 			);
@@ -358,7 +414,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TB5VXYZS9X;
-				INFOPLIST_FILE = FrameworkAnimationHW/Info.plist;
+				INFOPLIST_FILE = FrameworkAnimationHW/Supports/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -378,7 +434,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TB5VXYZS9X;
-				INFOPLIST_FILE = FrameworkAnimationHW/Info.plist;
+				INFOPLIST_FILE = FrameworkAnimationHW/Supports/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
