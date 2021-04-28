@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49G-wk-PFg">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49G-wk-PFg" customClass="SpringView" customModule="Spring">
                                 <rect key="frame" x="40" y="33" width="240" height="167.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZMp-bA-FSA">
@@ -68,6 +68,9 @@
                                 <rect key="frame" x="40" y="488" width="240" height="30"/>
                                 <color key="backgroundColor" systemColor="systemGray3Color"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="runButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="aR6-uG-Cug"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -80,6 +83,15 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ajL-Il-FlH" secondAttribute="bottom" constant="50" id="iCb-98-Gj0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="curveLabel" destination="wr1-Rz-bTX" id="jgq-1F-ZX3"/>
+                        <outlet property="delayLabel" destination="CCB-a0-W41" id="X5O-Kk-NHv"/>
+                        <outlet property="durationLabel" destination="Om2-vp-odY" id="yOE-7j-W1e"/>
+                        <outlet property="forceLabel" destination="gu9-7z-AQq" id="Ggu-GW-gdC"/>
+                        <outlet property="presetLabel" destination="pES-R1-xgD" id="Q7q-Kg-qmG"/>
+                        <outlet property="runButton" destination="ajL-Il-FlH" id="uyZ-Us-KIQ"/>
+                        <outlet property="springAnimationView" destination="49G-wk-PFg" id="MZ5-Xp-cIZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,12 +10,12 @@
 		E4ED661EC4CC4F0477418B2D /* Pods_FrameworkAnimationHW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD35CE627A1624CEEA681C1 /* Pods_FrameworkAnimationHW.framework */; };
 		F72B52F12639B6DB00E11C20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72B52F02639B6DB00E11C20 /* AppDelegate.swift */; };
 		F72B52F32639B6DB00E11C20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72B52F22639B6DB00E11C20 /* SceneDelegate.swift */; };
-		F72B52F52639B6DB00E11C20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72B52F42639B6DB00E11C20 /* ViewController.swift */; };
 		F72B52F82639B6DB00E11C20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72B52F62639B6DB00E11C20 /* Main.storyboard */; };
 		F72B52FA2639B6DC00E11C20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F72B52F92639B6DC00E11C20 /* Assets.xcassets */; };
 		F72B52FD2639B6DC00E11C20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72B52FB2639B6DC00E11C20 /* LaunchScreen.storyboard */; };
 		F72B530D2639BB1200E11C20 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72B530C2639BB1200E11C20 /* DataManager.swift */; };
 		F72B53172639BB9E00E11C20 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72B53162639BB9E00E11C20 /* Model.swift */; };
+		F72B531D2639BFAA00E11C20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72B531C2639BFAA00E11C20 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,13 +25,13 @@
 		F72B52ED2639B6DB00E11C20 /* FrameworkAnimationHW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrameworkAnimationHW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F72B52F02639B6DB00E11C20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F72B52F22639B6DB00E11C20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F72B52F42639B6DB00E11C20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F72B52F72639B6DB00E11C20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F72B52F92639B6DC00E11C20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F72B52FC2639B6DC00E11C20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F72B52FE2639B6DC00E11C20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F72B530C2639BB1200E11C20 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		F72B53162639BB9E00E11C20 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		F72B531C2639BFAA00E11C20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +97,7 @@
 		F72B53092639BAB200E11C20 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F72B52F42639B6DB00E11C20 /* ViewController.swift */,
+				F72B531C2639BFAA00E11C20 /* ViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -260,8 +260,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F72B531D2639BFAA00E11C20 /* ViewController.swift in Sources */,
 				F72B53172639BB9E00E11C20 /* Model.swift in Sources */,
-				F72B52F52639B6DB00E11C20 /* ViewController.swift in Sources */,
 				F72B530D2639BB1200E11C20 /* DataManager.swift in Sources */,
 				F72B52F12639B6DB00E11C20 /* AppDelegate.swift in Sources */,
 				F72B52F32639B6DB00E11C20 /* SceneDelegate.swift in Sources */,
