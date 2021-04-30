@@ -21,11 +21,5 @@ class DataManager  {
         "spring", "linear", "easeIn", "easeOut", "easeInOut"
     ]
     
-    let forces = [1.0, 1.2, 1.4, 1.6, 1.8, 2.0]
-    
-    let durations = [1.0, 1.5, 2.0, 2,5, 3.0]
-    
-    let delays = [0.2, 0.4, 0.6, 0.8, 1.0]
-    
     private init() {}
 }

@@ -13,13 +13,24 @@ struct Animation {
     let duration: Double
     let delay: Double
     
+    var description: String {
+        """
+        preset: \(preset)
+        curve: \(curve)
+        force: \(String(format: "%.2f", force))
+        duration: \(String(format: "%.2f", duration))
+        delay: \(String(format: "%.2f", delay))
+        
+        """
+    }
+    
     static func getAnimation() -> Animation {
         Animation(
-            preset: DataManager.shared.presets.randomElement() ?? "",
-            curve: DataManager.shared.curves.randomElement() ?? "",
-            force: DataManager.shared.forces.randomElement() ?? 1.0,
-            duration: DataManager.shared.durations.randomElement() ?? 2.0,
-            delay: DataManager.shared.delays.randomElement() ?? 0.2
+            preset: DataManager.shared.presets.randomElement() ?? "slideLeft",
+            curve: DataManager.shared.curves.randomElement() ?? "easeIn",
+            force: Double.random(in: 1...2),
+            duration: Double.random(in: 2...3),
+            delay: 0.5
         )
     }
 }
